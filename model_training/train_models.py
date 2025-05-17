@@ -138,4 +138,8 @@ plt.show()
 with open("model_training/best_model.pkl", "wb") as f:
     pickle.dump(best_model, f)
 
+with open("model_training/scaler.pkl", "wb") as f:
+    pickle.dump(scaler, f)
+
+
 print("🏆 Best model saved successfully!")
