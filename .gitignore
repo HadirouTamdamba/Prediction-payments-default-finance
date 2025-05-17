@@ -1,2 +1,3 @@
 model_training/best_model.pkl
 model_training/best_model.pkl
+*.pkl
