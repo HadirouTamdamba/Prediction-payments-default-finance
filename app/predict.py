@@ -1,5 +1,5 @@
 import numpy as np
-from model.model_loader import load_model, load_scaler
+from model_training.model_loader import load_model, load_scaler 
 
 model = load_model()
 scaler = load_scaler()
@@ -19,3 +19,4 @@ def make_prediction(input_data: dict) -> dict:
         "prediction": int(prediction),
         "probability_of_default": round(proba, 4)
     }
+

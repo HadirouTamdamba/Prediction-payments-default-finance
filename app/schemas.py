@@ -25,3 +25,4 @@ class CreditInput(BaseModel):
     PAY_AMT4: float
     PAY_AMT5: float
     PAY_AMT6: float
+
