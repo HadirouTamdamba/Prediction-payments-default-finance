@@ -5,3 +5,5 @@ xgboost
 numpy
 pandas
 imblearn
+pydantic==2.6.4
+joblib==1.4.0
