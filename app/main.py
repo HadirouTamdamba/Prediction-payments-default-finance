@@ -16,3 +16,6 @@ def welcome():
 def predict_default(data: CreditInput):
     prediction = make_prediction(data.dict())
     return prediction
+
+
+#Application test : python -m uvicorn app.main:app --reload
