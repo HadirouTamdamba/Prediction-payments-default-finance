@@ -35,4 +35,9 @@ EXPOSE 8000
 #  Start the FastAPI server
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
-## Launching : docker build -t bank-default-api -f docker/Dockerfile .
+
+### Launch the entire stack automatically (This : Build API, Automatically run Pytest tests, 
+### Start API ready for testing with curl or Postman) :: docker-compose up --build
+
+## Launching : docker build -t bank-default-api -f docker/Dockerfile
+ 
