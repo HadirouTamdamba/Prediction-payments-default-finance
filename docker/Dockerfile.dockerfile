@@ -36,8 +36,27 @@ EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
-### Launch the entire stack automatically (This : Build API, Automatically run Pytest tests, 
+####### Launch the entire stack automatically (This : Build API, Automatically run Pytest tests, 
 ### Start API ready for testing with curl or Postman) :: docker-compose up --build
+
+# Testing the API with curl
+#curl -X POST http://localhost:8000/predict \
+#  -H "Content-Type: application/json" \
+#  -d '{
+#    "LIMIT_BAL": 20000,
+#    "SEX": 2,
+#    "EDUCATION": 2,
+#    "MARRIAGE": 1,
+#    "AGE": 24,
+#    "PAY_0": 2,
+#    "PAY_2": 2,
+#    "BILL_AMT1": 3913,
+#    "PAY_AMT1": 0,
+#    "PAY_AMT2": 0
+#}'
+
+
+
 
 ## Launching : docker build -t bank-default-api -f docker/Dockerfile
  
