@@ -1,4 +1,4 @@
-version: "3.9"
+# docker/docker-compose.yml
 
 services:
   api:
@@ -19,9 +19,16 @@ services:
     command: ["pytest", "tests/test_api.py"]
     networks:
       - bank_net
+    depends_on:
+      - api
 
 networks:
   bank_net:
     driver: bridge
 
-# Launching : docker-compose -f docker/docker-compose.yml up --build
+## ✅ Launch instructions (PowerShell or terminal)
+## cd "D:\Mon Portfolio Projets\Prediction-payments-default-finance\docker"
+# docker-compose up --build
+
+
+# Launching : docker-compose -f docker/docker-compose.yml up --build 

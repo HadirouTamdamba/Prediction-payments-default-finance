@@ -1,0 +1,32 @@
+# docker/Dockerfile.test
+
+# Use secure & minimal Python Alpine image
+FROM python:3.13.4-alpine
+
+# Define working directory
+WORKDIR /app
+
+# Install system packages required for Python dependencies
+RUN apk add --no-cache \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    build-base \
+    libxml2-dev \
+    libxslt-dev \
+    linux-headers \
+    postgresql-dev
+
+# Copy test and application files
+COPY ../tests ./tests
+COPY ../requirements.txt .
+COPY ../model_training ./model_training
+COPY ../app ./app
+COPY ../column_names.json ./column_names.json
+
+# Install Python packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Default command: run pytest on the main API test file
+CMD ["pytest", "tests/test_api.py"]
+
