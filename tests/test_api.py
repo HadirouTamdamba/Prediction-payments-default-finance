@@ -1,4 +1,4 @@
-# Purpose: Unit test for the FastAPI endpoint using pytest
+# Purpose: Unit test for the FastAPI prediction endpoint using pytest
 
 from fastapi.testclient import TestClient
 from app.main import app
@@ -8,6 +8,7 @@ client = TestClient(app)
 def test_predict_default():
     """
     Unit test to validate the /predict endpoint with a valid sample payload.
+    Ensures the endpoint returns 200 OK and the expected keys.
     """
     payload = {
         "LIMIT_BAL": 20000.0,
