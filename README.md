@@ -39,7 +39,6 @@ Prediction-payments-default-finance/
 
 
 ---
-
 ## 🎯 Project Objective
 
 The goal is to **predict whether a customer will default on their credit card payment next month** based on demographic and payment history features.  
@@ -52,7 +51,6 @@ Develop a fully automated **end-to-end Machine Learning pipeline** to predict th
 The project uses the [Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) from UCI.
 
 ---
-
 ## 🧠 Key Responsibilities & Achievements
 
 | Responsibility                         | Details                                                                 |
@@ -66,7 +64,6 @@ The project uses the [Default of Credit Card Clients Dataset](https://archive.ic
 | 🔬 Testing & Monitoring                | Automated unit tests for API health and model response                 |
 
 ---
-
 ## 📊 Model Performance Summary
 
 After applying preprocessing, scaling, and SMOTE balancing, the following results were obtained:
@@ -79,6 +76,6 @@ After applying preprocessing, scaling, and SMOTE balancing, the following result
 
 > 🔍 **Conclusion**: XGBoost model selected as best performer and exported for production.
 
----
 
+---
 ## 🔧 Folder Structure
