@@ -27,6 +27,13 @@ Prediction-payments-default-finance/
 │   ├── docker-compose.yml         # Orchestration file
 │   ├── requirements.txt           # Python dependencies
 │   └── .dockerignore              # Ignore rules for Docker
+|
+├── data/                          # Dataset and preprocessed CSVs
+│   ├── UCI_Credit_Card.csv
+│   ├── processed_train.csv
+│   ├── processed_test.csv
+│   ├── processed_y_train.csv
+│   └── processed_y_test.csv
 │
 ├── column_names.json              # Selected features list
 ├── EDA/                           # EDA results & pipeline
