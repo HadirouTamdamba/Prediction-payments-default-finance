@@ -55,27 +55,31 @@ Develop a fully automated **end-to-end Machine Learning pipeline** to predict th
 
 The project uses the [Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) from UCI.
 
-## 🧠 Key Responsibilities & Achievements
+| Area                               | Description                                                                        |
+| ---------------------------------- | ---------------------------------------------------------------------------------- |
+| 📊 **EDA & Feature Selection**     | Used correlation matrix + domain rules to select top 10 predictors                 |
+| ⚖️ **Class Imbalance**             | Applied **SMOTE** to rebalance 22% minority class (defaults)                       |
+| 🧪 **Model Benchmarking**          | Trained **Logistic Regression**, **Random Forest**, and **XGBoost**                |
+| 🎯 **Hyperparameter Optimization** | Applied **RandomizedSearchCV** with 5-fold CV and `roc_auc` scoring for each model |
+| 🧠 **Model Selection**             | Chose **XGBoost** based on **F1-score** and **generalization performance**         |
+| 🔍 **Feature Importance**          | Visualized via Random Forest to assist business interpretability                   |
+| 📦 **Model Export**                | Saved best model + scaler using `pickle` for API integration                       |
+| 🚀 **Cloud Deployment (Ongoing)**  | Dockerized app and deployed on **AWS Lambda**              |
 
-| Responsibility                         | Details                                                                 |
-|----------------------------------------|-------------------------------------------------------------------------|
-| 🧼 Data Cleaning & Feature Selection   | Selected 10 most predictive features based on domain knowledge + EDA   |
-| ⚖️ Class Imbalance Handling            | Used SMOTE to oversample minority class (defaults = 22%)               |
-| 🧪 Model Benchmarking                  | Trained and tuned 3 models: Logistic Regression, Random Forest, XGBoost |
-| 📈 Model Selection                     | Selected **XGBoost** for best F1-score (0.487) and balanced performance |
-| 🛠️ Model Export & Serving              | Exported model and scaler with `pickle` and integrated in API          |
-| 🚀 Deployment to AWS (Ongoing)         | Deployed with Docker + FastAPI using **AWS Lambda** + **Route 53**     |
-| 🔬 Testing & Monitoring                | Automated unit tests for API health and model response                 |
 ---
 
-## 📊 Model Performance Summary
-After applying preprocessing, scaling, and SMOTE balancing, the following results were obtained:
-| Model               | AUC    | F1-score | Recall |
-|--------------------|--------|----------|--------|
-| Logistic Regression| 0.659  | 0.461    | 0.623  |
-| Random Forest       | 0.668  | 0.484    | 0.459  |
-| **XGBoost** ✅       | **0.667**  | **0.487**    | **0.430**  |
-> 🔍 **Conclusion**: XGBoost model selected as best performer and exported for production.
+## 📊 Model Performance + Optimization Summary
+Each model was trained with hyperparameter tuning using RandomizedSearchCV (10 iterations, 5-fold CV):
+
+| Model               | Search Space Summary                                   | AUC       | F1-score  | Recall    |
+| ------------------- | ------------------------------------------------------ | --------- | --------- | --------- |
+| Logistic Regression | `C` ∈ \[0.001, ..., 100]                               | 0.659     | 0.461     | 0.623     |
+| Random Forest       | `n_estimators`, `max_depth`, `min_samples_split` tuned | 0.668     | 0.484     | 0.459     |
+| **XGBoost** ✅       | `n_estimators`, `learning_rate`, `max_depth` tuned     | **0.667** | **0.487** | **0.430** |
+
+> 🔍 **Conclusion**:
+- XGBoost selected for its superior balance between AUC, F1-score, and robustness
+- Trained on SMOTE-balanced data, then tested on untouched holdout set.
 
 ---
 
