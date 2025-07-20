@@ -106,3 +106,16 @@ Each model was trained with hyperparameter tuning using RandomizedSearchCV (10 i
 ✅ Fully functional prediction pipeline  
 ✅ High-performance XGBoost model  
 ✅ Scalable & automated deployment  
+
+---
+## 👨‍💻 About the Author  
+**Hadirou Tamdamba**  
+_Microsoft Certified in Generative AI & Machine Learning Engineer_  
+
+🔗 **LinkedIn**: [Hadirou Tamdamba](https://www.linkedin.com/in/hadirou-tamdamba/)  
+🔗 **GitHub**: [HadirouTamdamba](https://github.com/HadirouTamdamba)  
+📧 **Email**: hadirou.tamdamba@outlook.fr  
+
+---
+
+📢 **Feel free to explore, contribute, or provide feedback!**  
