@@ -1,9 +1,10 @@
-# 💳 Bank Default Payment Prediction API
+# 💳🏦 Bank Default Payment Prediction 
+
 A complete Machine Learning and MLOps-ready project to predict **credit card payment default risk** using a clean and containerized FastAPI REST API.  
 This solution includes **model training, API deployment, CI-ready test automation**, and is structured for production or scalable cloud deployment.
 ---
 
-## Project Architecture
+## 🔧 Project Architecture
 
 ```plaintext
 Prediction-payments-default-finance/
@@ -98,3 +99,10 @@ Each model was trained with hyperparameter tuning using RandomizedSearchCV (10 i
 - Docker, Docker Compose
 - AWS Lambda, AWS Route 53
 - GitHub Actions (CI/CD)
+
+---
+## 🏁 Result
+
+✅ Fully functional prediction pipeline  
+✅ High-performance XGBoost model  
+✅ Scalable & automated deployment  
