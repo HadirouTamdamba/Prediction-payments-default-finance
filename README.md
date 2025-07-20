@@ -64,7 +64,7 @@ The project uses the [Default of Credit Card Clients Dataset](https://archive.ic
 | 🧪 Model Benchmarking                  | Trained and tuned 3 models: Logistic Regression, Random Forest, XGBoost |
 | 📈 Model Selection                     | Selected **XGBoost** for best F1-score (0.487) and balanced performance |
 | 🛠️ Model Export & Serving              | Exported model and scaler with `pickle` and integrated in API          |
-| 🚀 Deployment to AWS                   | Deployed with Docker + FastAPI using **AWS Lambda** + **Route 53**     |
+| 🚀 Deployment to AWS (Ongoing)         | Deployed with Docker + FastAPI using **AWS Lambda** + **Route 53**     |
 | 🔬 Testing & Monitoring                | Automated unit tests for API health and model response                 |
 ---
 
@@ -76,6 +76,21 @@ After applying preprocessing, scaling, and SMOTE balancing, the following result
 | Random Forest       | 0.668  | 0.484    | 0.459  |
 | **XGBoost** ✅       | **0.667**  | **0.487**    | **0.430**  |
 > 🔍 **Conclusion**: XGBoost model selected as best performer and exported for production.
+
 ---
 
-## 🔧 Folder Structure
+## 🐳 Deployment & CI/CD
+
+- Dockerized app with **multi-stage builds**
+- API and model containerized and orchestrated via **docker-compose**
+- Tested using **pytest + curl** in containerized environments
+- Deployed on **AWS Lambda via container image** with custom domain **(Ongoing)**
+---
+
+## 📍 Tech Stack
+
+- Python 3.10, pandas, scikit-learn, imbalanced-learn, XGBoost
+- FastAPI, Uvicorn
+- Docker, Docker Compose
+- AWS Lambda, AWS Route 53
+- GitHub Actions (CI/CD)
