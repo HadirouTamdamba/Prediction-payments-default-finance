@@ -4,7 +4,7 @@ A complete Machine Learning and MLOps-ready project to predict **credit card pay
 This solution includes **model training, API deployment, CI-ready test automation**, and is structured for production or scalable cloud deployment.
 ---
 
-## 🔧 Project Architecture
+## 🏗️  Project Architecture
 
 ```plaintext
 Prediction-payments-default-finance/
