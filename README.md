@@ -110,7 +110,7 @@ Each model was trained with hyperparameter tuning using RandomizedSearchCV (10 i
 ---
 ## 👨‍💻 About the Author  
 **Hadirou Tamdamba**  
-_Microsoft Certified in Generative AI & Machine Learning Engineer_  
+_Machine Learning Engineer | Microsoft Certified Generative AI Engineer_  
 
 🔗 **LinkedIn**: [Hadirou Tamdamba](https://www.linkedin.com/in/hadirou-tamdamba/)  
 🔗 **GitHub**: [HadirouTamdamba](https://github.com/HadirouTamdamba)  
